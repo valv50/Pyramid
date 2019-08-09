@@ -6,9 +6,7 @@ using System.Text;
 namespace Pyramid
 {
     public class PyramidProcessing
-    {
-        private bool _isEven;
-
+    {        
         private int[][] _initialData;
 
         private List<(int sum, int lastIndex, int lastLevel, List<(int index, int value)> path)> _results;          
@@ -22,20 +20,22 @@ namespace Pyramid
 
         public (int sum, List<(int index, int value)> path) Process()
         {
+            bool isEven = false;
+
             for (int i1 = 1; i1 <= _initialData.Length; i1++)
             {
                 if (i1 == 1)
                 {
-                    _isEven = _initialData[i1 - 1][0] % 2 == 0;
+                    isEven = _initialData[i1 - 1][0] % 2 == 0;
 
                     FillFirstLevel();
                 }
                 else
                 {
-                    FillNewLevel(i1, _isEven);
+                    FillNewLevel(i1, isEven);
                 }
 
-                _isEven = !_isEven;
+                isEven = !isEven;
             }
 
             (int sum, List<(int index, int value)> path) result;
@@ -81,6 +81,8 @@ namespace Pyramid
             }
 
             _results.RemoveAll(r => r.lastLevel < level);
+
+            // Pridėti tik viršunes su didžiausią esamą sumą
 
             var highestInGroups =
                 from n in newItems
