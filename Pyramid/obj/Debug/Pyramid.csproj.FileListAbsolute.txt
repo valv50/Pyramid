@@ -1,0 +1,7 @@
+C:\Git\Pyramid\Pyramid\bin\Debug\Pyramidnew.exe.config
+C:\Git\Pyramid\Pyramid\bin\Debug\Pyramidnew.exe
+C:\Git\Pyramid\Pyramid\bin\Debug\Pyramidnew.pdb
+C:\Git\Pyramid\Pyramid\obj\Debug\Pyramid.csproj.CoreCompileInputs.cache
+C:\Git\Pyramid\Pyramid\obj\Debug\Pyramidnew.exe
+C:\Git\Pyramid\Pyramid\obj\Debug\Pyramidnew.pdb
+C:\Git\Pyramid\Pyramid\obj\Debug\Pyramid.csprojAssemblyReference.cache
